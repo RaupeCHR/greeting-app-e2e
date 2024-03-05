@@ -26,9 +26,7 @@ jobs:
     - run: npm install selenium-webdriver express mocha webdriver-manager
     - run: ./node_modules/.bin/webdriver-manager update --versions.chrome=89.0.4389.23
     - run: npm run build --if-present
-    - name: Start Server
     - run: node server.js &
-    - name: Run Test
     - run: ./node_modules/.bin/mocha test/test.spec.js
       env:
         CI: true
