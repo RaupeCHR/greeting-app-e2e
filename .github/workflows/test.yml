@@ -20,8 +20,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@latest
+    - name: Setup Chromium
+      uses: browser-actions/setup-chromium@latest
     - run: npm install
     - run: npm install selenium-webdriver express mocha webdriver-manager
     - run: ./node_modules/.bin/webdriver-manager update --versions.chrome=89.0.4389.23
