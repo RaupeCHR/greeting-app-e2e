@@ -4,7 +4,7 @@
   "description": "",
   "main": "greetingApp.js",
   "scripts": {
-    "test": "mocha test.spec.js",
+    "test": "mocha test/test.spec.js",
     "start": "node server.js"
   },
   "keywords": [],
