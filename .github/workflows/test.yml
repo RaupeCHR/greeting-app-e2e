@@ -20,8 +20,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm install express
+    - run: npm ci
+    - run: npm install express mocha
     - run: npm run build --if-present
     - run: ./node_modules/.bin/mocha test.spec.js
       env:
